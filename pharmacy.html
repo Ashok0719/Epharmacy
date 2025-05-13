@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PharmaCare - Online Pharmacy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <h1 class="logo">PharmaCare</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Medicines</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Get Genuine Medicines Delivered to Your Doorstep</h2>
+      <p>Order with confidence and care — anytime, anywhere.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title">Available Tablets</h2>
+    <div class="grid" id="productGrid">
+      <!-- Tablets rendered by script.js -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PharmaCare. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Order Modal -->
+  <div id="orderModal" class="modal">
+    <div class="modal-box">
+      <span class="close" onclick="closeOrderForm()">&times;</span>
+      <h3>Complete Your Order</h3>
+      <form id="orderForm" onsubmit="submitOrder(event)">
+        <input type="hidden" id="medicineName" />
+
+        <label>Full Name</label>
+        <input type="text" id="name" required />
+
+        <label>Address</label>
+        <textarea id="address" rows="3" required></textarea>
+
+        <label>Quantity</label>
+        <input type="number" id="quantity" value="1" min="1" required />
+
+        <button type="submit">Submit Order</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

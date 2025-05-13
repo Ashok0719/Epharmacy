@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Pharmacy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #2a9d8f;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      background: #264653;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1588776814546-ec3f9a66cf3e') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      text-shadow: 1px 1px 5px #000;
+    }
+    .content {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin: 10px 0;
+    }
+    .card button {
+      background: #e76f51;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #264653;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HealthEase Online Pharmacy</h1>
+    <p>Your Trusted Health Partner</p>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Medicines</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="hero">
+    <div>Order Medicines Online</div>
+  </div>
+  <section class="content">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588774069262-f9b0086baf9f" alt="Medicine 1">
+      <h3>Paracetamol 500mg</h3>
+      <p>Used for pain relief and fever reduction.</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580281657520-0dfeeb5d0f56" alt="Medicine 2">
+      <h3>Vitamin C Tablets</h3>
+      <p>Boosts immune system and improves health.</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1584367367093-67d2a2d93d4d" alt="Medicine 3">
+      <h3>Antibiotic Capsules</h3>
+      <p>Effective against bacterial infections.</p>
+      <button>Add to Cart</button>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 HealthEase. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Item added to cart!');
+      });
+    });
+  </script>
+</body>
+</html>
